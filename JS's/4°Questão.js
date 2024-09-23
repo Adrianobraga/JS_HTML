@@ -2,6 +2,13 @@ let Quantidade = document.querySelector('#quantidade');
 let botao = document.querySelector('#botao');
 let resposta = document.querySelector('#resposta')
 
+/*
+     @method:Preco
+     @return: String;
+     @args:Quantidade: int , resposta: string
+     Verifica a quantidade de maçãs para colocar um preço
+
+*/
 
 function Preco (Quantidade){
     botao.onclick = function(){
