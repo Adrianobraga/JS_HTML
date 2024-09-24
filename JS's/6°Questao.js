@@ -7,7 +7,14 @@ botao.onclick = function () {
     const AnoAtual = DataAtual.getFullYear();
     const AnoNascido = Number.parseInt(document.querySelector("#AnoNascido").value);
     let Calculo = AnoAtual - AnoNascido;
-    
+  
+    /*
+     @method:verificar
+     @return: string;
+     @args:calculo: int.
+     Verifica se o usuário já pode votar.
+
+    */
     const verificar = (Calculo) => {
      if(Calculo >= 18){
         resposta.innerHTML = `
