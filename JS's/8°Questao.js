@@ -5,7 +5,6 @@ let resposta = document.querySelector("#resposta");
 botao.onclick = function(){
     let Valor1 = Number.parseInt(document.querySelector("#valor1").value);
     let Valor2 = Number.parseInt(document.querySelector("#valor2").value);
-    console.log(Valor1)
     
     /*
      @method:sequencia.
