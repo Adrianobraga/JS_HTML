@@ -1,11 +1,7 @@
 
 let botao = document.querySelector('#botao');
-let nota1 = document.querySelector('#resposta');
+let resposta = document.querySelector('#resposta');
     
-botao.onclick = function(){    
-    
-    let nota1 = Number.parseInt(document.querySelector('#nota1').value);
-    let nota2 = Number.parseInt(document.querySelector('#nota2').value);
 /*
      @method:media
      @return: float;
@@ -13,9 +9,7 @@ botao.onclick = function(){
      Calculo da media dos alunos.
 
 */
-    const media = (nota1,nota2) => (nota1+nota2)/2;
-    
-    const MEDIA = media(nota1,nota2);
+const media = (nota1,nota2) => (nota1+nota2)/2;
   
     /*
      @method:situacao
@@ -24,7 +18,7 @@ botao.onclick = function(){
      situação do aluno em relação a sua media.
 
     */
-    const situacao = (MEDIA) => {
+     const situacao = (MEDIA) => {
         if(MEDIA >= 7){
             resposta.innerHTML = `
               <p>APROVADO COM A MEDIA: ${MEDIA}</p>
@@ -35,5 +29,14 @@ botao.onclick = function(){
             `
         }
     }
+
+botao.onclick = function(){    
+    
+    let nota1 = Number.parseInt(document.querySelector('#nota1').value);
+    let nota2 = Number.parseInt(document.querySelector('#nota2').value);
+    
+    const MEDIA = media(nota1,nota2);
+  
+
     console.log(situacao(MEDIA))
 }
