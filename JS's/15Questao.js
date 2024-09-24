@@ -20,6 +20,5 @@ resposta.innerHTML = `Resultado final: , ${z} , Resposta:  , ${resultado} `
 botao.onclick = function (){
 let x = Number.parseInt(document.querySelector("#x").value);
 let y = Number.parseInt(document.querySelector("#y").value);
-console.log(x)
 valores(x,y);
 }
