@@ -1,6 +1,14 @@
 let botao = document.querySelector("#botao");
 let resposta = document.querySelector("#resposta"); 
 
+ /*
+     @method: vefificacao.
+     @return: string;
+     @args: QuantidadeAtual: int ,QuantidadeMinima: int , QuantidadeMaxima: int;
+     Verifica se pode fazer a compra de acordo com o estoque
+    
+ */
+
 const vefificacao = (QuantidadeAtual,QuantidadeMinima,QuantidadeMaxima) => {
 let QuantidadeMedia = (QuantidadeMaxima + QuantidadeMinima)/2;
 if(QuantidadeAtual >= QuantidadeMedia){
