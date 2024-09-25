@@ -31,7 +31,7 @@ const media = (valor1,valor2) => {
      <br>
      <label>NOVO CÁLCULO (S/N)?</label>
      <input type="text" id ="dnv">
-     <button id="sla">Enviar</button>`;
+     <button id="NV">Enviar</button>`;
 }
 
 
@@ -45,13 +45,10 @@ botao.onclick = function(){
             caso(valor1,valor2);
         }else{
         media(valor1,valor2);
-    
-
-      
 
 
 }
-let botao2 = document.querySelector("#sla");
+let botao2 = document.querySelector("#NV");
 botao2.onclick = function(){
     novo = document.querySelector("#dnv").value;
     if(novo == 'S'){
