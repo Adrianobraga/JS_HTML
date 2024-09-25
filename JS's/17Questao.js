@@ -1,6 +1,15 @@
 let botao = document.querySelector("#botao");
 let resposta = document.querySelector("#resposta"); 
 
+
+ /*
+     @method: cadastro.
+     @return: string,int;
+     @args: CodigoDoUsuario: int ,SenhaDoUsuario: int , CodigoArmazenado: int , SenhaArmazenada: int;
+     Valida o cadastro de um usuário;
+    
+ */
+
 const cadastro = (CodigoDoUsuario,SenhaDoUsuario,CodigoArmazenado,SenhaArmazenada) =>{
 if(CodigoDoUsuario == CodigoArmazenado){
  if(SenhaDoUsuario == SenhaArmazenada){
