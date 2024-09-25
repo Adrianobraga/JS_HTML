@@ -1,17 +1,30 @@
 let botao = document.querySelector("#botao");
 let resposta = document.querySelector("#resposta"); 
 
-let CodigoDoUsuario = 1234;
-let SenhaDoUsuario = 9999;
-let CodigoArmazenado = 1234;
-let SenhaArmazenada = 9999;
+const cadastro = (CodigoDoUsuario,SenhaDoUsuario,CodigoArmazenado,SenhaArmazenada) =>{
 if(CodigoDoUsuario == CodigoArmazenado){
  if(SenhaDoUsuario == SenhaArmazenada){
-    console.log("Acesso permitido");
+   resposta.innerHTML = `
+   <p>acesso permitido</p>
+   ` 
  }else{
-    console.log("‘senha incorreta");
+   resposta.innerHTML = `
+   <p>senha incorreta</p>
+   ` 
  }   
 
 }else{
-    console.log("Usuário inválido!")
+   resposta.innerHTML = `
+   <p>Usuário inválido!</p>
+   `
+}
+}
+botao.onclick = function(){
+   const informacao ={
+    CodigoDoUsuario: Number.parseInt(document.querySelector("#usuario").value),
+    SenhaDoUsuario: Number.parseInt(document.querySelector("#senha").value),
+    CodigoArmazenado: 1234,
+    SenhaArmazenada: 9999,
+   }
+   cadastro(informacao.CodigoDoUsuario,informacao.SenhaDoUsuario,informacao.CodigoArmazenado,informacao.SenhaArmazenada)
 }
