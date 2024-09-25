@@ -26,16 +26,40 @@ valor2 = 1;
      Média(simples) dos alunos
     */
 
-const media = (valor1,valor2) =>  resposta.innerHTML =`${(valor1+valor2)/2}`;
+const media = (valor1,valor2) => {
+     resposta.innerHTML =`${(valor1+valor2)/2}
+     <br>
+     <label>NOVO CÁLCULO (S/N)?</label>
+     <input type="text" id ="dnv">
+     <button id="sla">Enviar</button>`;
+}
+
 
 botao.onclick = function(){
     const valor1 = Number.parseFloat(document.querySelector("#valor1").value);
     const valor2 = Number.parseFloat(document.querySelector("#valor2").value);
+    let novo = "s";
 
-    if(valor1 < 0 || valor1 > 10 || valor2 < 0 || valor2 > 10){
+
+        if(valor1 < 0 || valor1 > 10 || valor2 < 0 || valor2 > 10){
             caso(valor1,valor2);
         }else{
-            media(valor1,valor2);
-        }
-        
+        media(valor1,valor2);
+    
+
+      
+
+
 }
+let botao2 = document.querySelector("#sla");
+botao2.onclick = function(){
+    novo = document.querySelector("#dnv").value;
+    if(novo == 'S'){
+    window.location.reload(true);
+    }else{
+        console.log("fim")
+    }
+
+}
+
+       }

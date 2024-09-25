@@ -15,7 +15,7 @@ const caso = (valor2) =>{
         valor2++
     }
 }
-/*
+    /*
      @method:divisao;
      @return: float;
      @args:valor1:float ,valor2: float;
