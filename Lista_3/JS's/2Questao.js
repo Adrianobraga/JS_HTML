@@ -12,6 +12,7 @@ let resposta = document.querySelector("#resposta");
 const caso = (valor2) =>{
     while(valor2 == 0){
         resposta.innerHTML = "Não da para dividir o 0"
+        valor2++
     }
 }
 /*
